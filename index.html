@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Glioma SNP Database</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f7f7f7; }
+    h1 { color: #333; }
+    p { color: #555; }
+    table { border-collapse: collapse; width: 100%; background: white; font-size: 13px; }
+    th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+    th { background-color: #4C72B0; color: white; position: sticky; top: 0; }
+    tr:nth-child(even) { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h1>Glioma-Associated SNP Database</h1>
+  <p>Total SNPs: 52 | Susceptibility: 40 | Pharmacogenetics: 8 | Needs Review: 4</p>
+  <table class="dataframe snp-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>rsID</th>
+      <th>Gene</th>
+      <th>Subtype</th>
+      <th>Risk_Effect_Allele</th>
+      <th>Effect_Measure</th>
+      <th>Effect_Size</th>
+      <th>P_Value</th>
+      <th>Evidence_Tier</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rs2736100</td>
+      <td>TERT</td>
+      <td>Glioma</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.270</td>
+      <td>1.50e-17</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs4295627</td>
+      <td>CCDC26</td>
+      <td>All glioma</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.360</td>
+      <td>2.34e-18</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs4977756</td>
+      <td>CDKN2A-CDKN2B</td>
+      <td>All glioma</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.240</td>
+      <td>7.24e-15</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs6010620</td>
+      <td>RTEL1</td>
+      <td>All glioma (high-grade in Wrensch 2009)</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.280</td>
+      <td>2.52e-12</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs498872</td>
+      <td>PHLDB1</td>
+      <td>All glioma</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>1.180</td>
+      <td>1.07e-08</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs11979158</td>
+      <td>EGFR</td>
+      <td>All glioma (subtype-independent)</td>
+      <td>A</td>
+      <td>OR</td>
+      <td>1.230</td>
+      <td>7.72e-08</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs2252586</td>
+      <td>EGFR region (107 kb telomeric to EGFR)</td>
+      <td>All glioma (subtype-independent)</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>1.180</td>
+      <td>2.09e-08</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs12752552</td>
+      <td>RAVER2 (1p31.3)</td>
+      <td>GBM</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>1.220</td>
+      <td>2.04e-09</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs4252707</td>
+      <td>MDM4 (1q32.1)</td>
+      <td>Non-GBM</td>
+      <td>A</td>
+      <td>OR</td>
+      <td>1.190</td>
+      <td>3.34e-09</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs11706832</td>
+      <td>LRIG1 (3p14.1)</td>
+      <td>Non-GBM</td>
+      <td>C</td>
+      <td>OR</td>
+      <td>1.150</td>
+      <td>7.66e-09</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs7572263</td>
+      <td>C2orf80 (2q33.3; near IDH1)</td>
+      <td>Non-GBM</td>
+      <td>A</td>
+      <td>OR</td>
+      <td>1.200</td>
+      <td>2.18e-10</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs11233250</td>
+      <td>FAM181B (11q14.1)</td>
+      <td>GBM</td>
+      <td>C</td>
+      <td>OR</td>
+      <td>1.240</td>
+      <td>9.95e-10</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs2562152</td>
+      <td>RHBDF1 (16p13.3)</td>
+      <td>GBM</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>1.210</td>
+      <td>1.93e-08</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs10852606</td>
+      <td>HEATR3 (16q12.1)</td>
+      <td>GBM</td>
+      <td>C</td>
+      <td>OR</td>
+      <td>1.180</td>
+      <td>1.29e-11</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs2235573</td>
+      <td>SLC16A8 (22q13.1)</td>
+      <td>GBM</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.150</td>
+      <td>1.76e-10</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs12076373</td>
+      <td>AKT3 (1q44)</td>
+      <td>Non-GBM</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.230</td>
+      <td>2.63e-10</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs7107785</td>
+      <td>MAML2 (11q21)</td>
+      <td>Non-GBM</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>1.160</td>
+      <td>3.87e-10</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs10131032</td>
+      <td>AKAP6 (14q12)</td>
+      <td>Non-GBM</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.330</td>
+      <td>5.07e-11</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs11598018</td>
+      <td>OBFC1 (10q24.33)</td>
+      <td>Non-GBM</td>
+      <td>A</td>
+      <td>OR</td>
+      <td>1.140</td>
+      <td>3.39e-08</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs3751667</td>
+      <td>LMF1 (16p13.3)</td>
+      <td>Non-GBM</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>1.180</td>
+      <td>2.61e-09</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs3851634</td>
+      <td>POLR3B (12q23.33)</td>
+      <td>GBM</td>
+      <td>C</td>
+      <td>OR</td>
+      <td>1.230</td>
+      <td>3.02e-09</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs11196067</td>
+      <td>VTI1A (10q25.2)</td>
+      <td>Non-GBM</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>1.180</td>
+      <td>4.32e-08</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs648044</td>
+      <td>ZBTB16 (11q23.2)</td>
+      <td>Non-GBM</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>1.250</td>
+      <td>6.26e-11</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs12230172</td>
+      <td>near PHLDA1 (12q21.2)</td>
+      <td>Non-GBM</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.230</td>
+      <td>7.53e-11</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs1801591</td>
+      <td>ETFA (15q24.2)</td>
+      <td>Non-GBM</td>
+      <td>A</td>
+      <td>OR</td>
+      <td>1.360</td>
+      <td>5.71e-09</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs55705857</td>
+      <td>CCDC26 (8q24.21)</td>
+      <td>IDH-mutant / Non-GBM (esp. oligodendroglioma)</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>3.110</td>
+      <td>5.00e-25</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs78378222</td>
+      <td>TP53 (17p13.1)</td>
+      <td>All glioma</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>3.740</td>
+      <td>6.86e-24</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs1412829</td>
+      <td>CDKN2A/B (9p21.3)</td>
+      <td>High-grade / All glioma</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.420</td>
+      <td>1.85e-10</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs10069690</td>
+      <td>TERT (5p15.33)</td>
+      <td>All glioma / GBM</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>1.450</td>
+      <td>2.71e-66</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs1920116</td>
+      <td>near TERC / LRRC31 (3q26.2)</td>
+      <td>High-grade / GBM</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.300</td>
+      <td>8.30e-09</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs5839764</td>
+      <td>D2HGDH (2q37.3)</td>
+      <td>IDH-mutated</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.564</td>
+      <td>2.82e-10</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs1106639</td>
+      <td>D2HGDH (2q37.3)</td>
+      <td>IDH-mutated non-codeleted</td>
+      <td>A</td>
+      <td>OR</td>
+      <td>1.718</td>
+      <td>4.96e-08</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs111976262</td>
+      <td>FAM20C (7p22.3)</td>
+      <td>Triple-positive (IDH-mut + TERT-mut + 1p/19q codeleted)</td>
+      <td>A</td>
+      <td>OR</td>
+      <td>3.051</td>
+      <td>9.56e-09</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs4809313</td>
+      <td>GMEB2 near RTEL1 (20q13.33)</td>
+      <td>IDH wild-type</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.510</td>
+      <td>2.60e-10</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs891835</td>
+      <td>CCDC26 (8q24.21)</td>
+      <td>All glioma</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.240</td>
+      <td>7.54e-11</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs4809324</td>
+      <td>RTEL1 (20q13.33)</td>
+      <td>High-grade</td>
+      <td>C</td>
+      <td>OR</td>
+      <td>1.600</td>
+      <td>1.70e-09</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs75061358</td>
+      <td>EGFR (7p11.2)</td>
+      <td>GBM</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.630</td>
+      <td>4.94e-34</td>
+      <td>Tier1</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs10842893</td>
+      <td>STK38L (12p11.23)</td>
+      <td>All glioma (East Asian)</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>2.070</td>
+      <td>2.33e-12</td>
+      <td>Tier3</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs4774756</td>
+      <td>RAB27A (15q21.3)</td>
+      <td>All glioma (East Asian)</td>
+      <td>C</td>
+      <td>OR</td>
+      <td>1.240</td>
+      <td>6.12e-08</td>
+      <td>Tier3</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs688755</td>
+      <td>CYP4F12 (19p13.12)</td>
+      <td>All glioma (East Asian)</td>
+      <td>C</td>
+      <td>OR</td>
+      <td>3.550</td>
+      <td>2.35e-08</td>
+      <td>Tier3</td>
+      <td>Susceptibility</td>
+    </tr>
+    <tr>
+      <td>rs2308321</td>
+      <td>MGMT</td>
+      <td>TMZ-treated survival</td>
+      <td>G</td>
+      <td>HR</td>
+      <td>1.210</td>
+      <td>1.90e-02</td>
+      <td>Tier2</td>
+      <td>Pharmacogenetics</td>
+    </tr>
+    <tr>
+      <td>rs16906252</td>
+      <td>MGMT</td>
+      <td>MGMT promoter methylation / TMZ response</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>1.960</td>
+      <td>1.30e-02</td>
+      <td>Tier2</td>
+      <td>Pharmacogenetics</td>
+    </tr>
+    <tr>
+      <td>rs12917</td>
+      <td>MGMT</td>
+      <td>TMZ myelotoxicity / response</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>0.840</td>
+      <td>NR</td>
+      <td>Tier2</td>
+      <td>Pharmacogenetics</td>
+    </tr>
+    <tr>
+      <td>rs1128503</td>
+      <td>ABCB1 (MDR1)</td>
+      <td>TMZ treatment outcome</td>
+      <td>T</td>
+      <td>OR</td>
+      <td>NR</td>
+      <td>2.00e-02</td>
+      <td>Tier2</td>
+      <td>Pharmacogenetics</td>
+    </tr>
+    <tr>
+      <td>rs73191162</td>
+      <td>near UNG</td>
+      <td>IDH-wt GBM + TMZ survival</td>
+      <td>T</td>
+      <td>HR</td>
+      <td>1.730</td>
+      <td>4.00e-04</td>
+      <td>Tier2</td>
+      <td>Pharmacogenetics</td>
+    </tr>
+    <tr>
+      <td>rs13076508</td>
+      <td>near PARP3</td>
+      <td>IDH-mut + TMZ survival</td>
+      <td>C</td>
+      <td>HR</td>
+      <td>0.400</td>
+      <td>2.60e-02</td>
+      <td>Tier2</td>
+      <td>Pharmacogenetics</td>
+    </tr>
+    <tr>
+      <td>rs7840433</td>
+      <td>near NEIL2</td>
+      <td>TMZ-treated survival (subtype-specific)</td>
+      <td>A</td>
+      <td>HR</td>
+      <td>2.330</td>
+      <td>&lt;0.05</td>
+      <td>Tier2</td>
+      <td>Pharmacogenetics</td>
+    </tr>
+    <tr>
+      <td>rs3130618</td>
+      <td>near MSH5</td>
+      <td>IDH-mut non-codeleted + TMZ</td>
+      <td>A</td>
+      <td>HR</td>
+      <td>0.580</td>
+      <td>2.00e-02</td>
+      <td>Tier2</td>
+      <td>Pharmacogenetics</td>
+    </tr>
+    <tr>
+      <td>rs25487</td>
+      <td>XRCC1</td>
+      <td>Risk / prognosis / TMZ response (candidate)</td>
+      <td>A</td>
+      <td>OR</td>
+      <td>1.120</td>
+      <td>7.00e-03</td>
+      <td>Tier2</td>
+      <td>Needs Review</td>
+    </tr>
+    <tr>
+      <td>rs3212986</td>
+      <td>ERCC1</td>
+      <td>Prognosis / TMZ response (candidate)</td>
+      <td>A</td>
+      <td>OR</td>
+      <td>1.298</td>
+      <td>2.50e-02</td>
+      <td>Tier2</td>
+      <td>Needs Review</td>
+    </tr>
+    <tr>
+      <td>rs4444903</td>
+      <td>EGF</td>
+      <td>Risk / prognosis</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.220</td>
+      <td>&lt; 0.001</td>
+      <td>Tier2</td>
+      <td>Needs Review</td>
+    </tr>
+    <tr>
+      <td>rs2279744</td>
+      <td>MDM2</td>
+      <td>Risk / prognosis (candidate)</td>
+      <td>G</td>
+      <td>OR</td>
+      <td>1.950</td>
+      <td>5.00e-02</td>
+      <td>Tier2</td>
+      <td>Needs Review</td>
+    </tr>
+  </tbody>
+</table>
+  <p style="margin-top:30px;color:#888;font-size:13px;">Undergraduate mini-project | glioma-snp-curation</p>
+</body>
+</html>
